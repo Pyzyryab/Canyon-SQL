@@ -242,7 +242,6 @@ impl CanyonMemory {
     }
 
     /// Generates, if not exists the `canyon_memory` table
-    #[cfg(not(cargo_check))]
     async fn create_memory(datasource_name: &str, database_type: &DatabaseType) {
         let query = match database_type {
             #[cfg(feature = "tokio-postgres")]

@@ -1,6 +1,7 @@
 [package]
 name = "canyon_sql"
 version = "0.2.0"
+edition = "2021"
 
 [workspace]
 members = [
@@ -15,9 +16,10 @@ members = [
 [dependencies]
 # Project crates
 canyon_macros = { version = "0.2.0", path = "canyon_macros" }
-canyon_observer = { version = "0.2.0", path = "canyon_observer" }
-canyon_crud = { version = "0.2.0", path = "canyon_crud" }
-canyon_connection = { version = "0.2.0", path = "canyon_connection" }
+canyon_observer = { version = "0.2.0", path = "canyon_observer", optional = true }
+canyon_crud = { workspace = true, path = "canyon_crud", dependencies = ["tokio-postgres", "tiberius"] }
+canyon_connection = { workspace = true, path = "canyon_connection", dependencies = ["tokio-postgres", "tiberius"] }
+async-trait = { workspace = true }
 
 [workspace.dependencies]
 canyon_crud = { version = "0.2.0", path = "canyon_crud" }

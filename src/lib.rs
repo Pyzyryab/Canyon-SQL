@@ -8,7 +8,7 @@ extern crate canyon_crud;
 extern crate canyon_macros;
 extern crate canyon_observer;
 
-// extern crate async_trait;
+extern crate async_trait;
 
 /// Reexported elements to the root of the public API
 pub mod migrations {
@@ -21,7 +21,7 @@ pub use canyon_macros::main;
 
 /// Public API for the `Canyon-SQL` proc-macros, and for the external ones
 pub mod macros {
-    // pub use async_trait::*;
+    pub use async_trait::*;
     pub use canyon_macros::*;
 }
 

@@ -311,7 +311,7 @@ pub fn generate_multiple_insert_tokens(
                                     .expect("SQL Server primary key type failed to be set as value");
                             }
 
-                            Ok(()),
+                            Ok(())
                         },
                         _ => panic!() // TODO remove when the generics will be refactored
                     }
